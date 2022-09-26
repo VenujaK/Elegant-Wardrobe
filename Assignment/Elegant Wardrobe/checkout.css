@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: url("./IMG/undraw_pay_online_b-1-hk.svg") no-repeat top center;
+    width: 100%;
+    height: 100vh;
+}
+
+.checkoutform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 380px;
+    width: 100%;
+    background: #4c4968;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.card_number {
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid #9e9e9e;
+    border: 0;
+    text-align: center;
+}
+
+.card_number .input {
+    width: 100%;
+    text-align: left;
+}
+
+.card_grp {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.message {
+    background-color: #f04545;
+    position: absolute;
+    left: 37%;
+    padding: 10px;
+    color: black;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.exdate,
+.cvv {
+    width: 48%;
+    display: flex;
+}
+
+.exdate .exday {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.cvv {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cvv .cvv_input {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.btnPay {
+    width: 100%;
+    background: #f04545;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+
+.mt-1 a {
+    text-decoration: none;
+    color: #f04545;
+}
+
+.mt-1 a :hover {
+    text-decoration: none;
+    color: #f04545;
+}
+
+.btnPay:hover {
+    background-color: white;
+    color: #f04545;
+    transform: translateY(-4px);
+}
+
+@media screen and (max-width: 420px) {
+    .card_grp {
+        flex-direction: column;
+    }
+    .exdate {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    .exdate .exday {
+        width: 48%;
+        margin: 0;
+    }
+    .cvv {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .cvv .cvv_input {
+        width: 48%;
+    }
+    .cvv_img .img {
+        right: 26px;
+    }
+}

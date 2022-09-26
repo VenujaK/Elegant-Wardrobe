@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="User.css">
+
+    <title>Admin Login</title>
+    <style>
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-image: url(./IMG/adminbg.svg);
+            background-position: bottom;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            position: relative;
+            bottom: 90px;
+            right: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="POST" class="login-email">
+            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Admin Login</p>
+            <div class="input-group">
+                <input type="text" placeholder="Email" id="txtUser" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password" id="txtPassword" required>
+            </div>
+            <div class="input-group">
+                <button name="submit" class="btn" name="btnLogin" onclick="getInfo()" type="submit">Login</button>
+            </div>
+            <!-- <?php echo $msg; ?> -->
+        </form>
+    </div>
+    <script>
+        var objPeople = [{
+                username: "admin",
+                password: "1234"
+            }, {
+                username: "admin2",
+                password: "1234"
+            }, {
+                username: "admin3",
+                password: "1234"
+            }
+
+        ]
+
+        function login(url) {
+            window.open("admin_page.php");
+        }
+
+        function getInfo() {
+            var username = document.getElementById('txtUser').value
+            var password = document.getElementById('txtPassword').value
+
+            for (var i = 0; i < objPeople.length; i++) {
+
+                if (username == objPeople[i].username && password == objPeople[i].password) {
+                    console.log(username + " is logged in!!!")
+                    login();
+                    return
+                }
+            }
+            console.log("incorrect username or password")
+        }
+    </script>
+</body>
+
+</html>

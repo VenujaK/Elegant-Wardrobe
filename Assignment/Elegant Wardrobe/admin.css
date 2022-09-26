@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./undraw_product_iteration_kjok.svg);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.buttons {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    background: #f04545;
+    color: white;
+    text-align: center;
+}
+
+.btns {
+    width: 40%;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    margin-left: 20px;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    position: relative;
+    left: 50px;
+    background: #f0ed45;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.message {
+    /* display: block; */
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    background: rgb(255, 6, 6);
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.formContainer.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.formContainer form {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: .5rem;
+    background: rgb(54, 53, 53);
+}
+
+.formContainer form h3 {
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.formContainer form .box {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.7rem;
+    margin: 1rem 0;
+    background: white;
+    text-transform: none;
+}
+
+.products {
+    margin: 2rem 0;
+}
+
+.products .tblproduct {
+    width: 100%;
+    text-align: center;
+}
+
+.products .tblproduct thead {
+    background: rgb(54, 53, 53);
+    color: white;
+}
+
+.products .tblproduct th {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.products .tblproduct td {
+    padding: 1rem;
+    font-size: 2rem;
+    border-bottom: .1rem solid black;
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px) {
+    .products {
+        overflow-y: scroll;
+    }
+    .products .tblproduct {
+        width: 80rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
